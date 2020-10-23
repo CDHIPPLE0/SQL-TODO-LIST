@@ -1,0 +1,23 @@
+{
+  "name": "weekend-sql-to-do-list-master",
+  "version": "1.0.0",
+  "description": "[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CDHIPPLE0/SQL-TODO-LIST.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CDHIPPLE0/SQL-TODO-LIST/issues"
+  },
+  "homepage": "https://github.com/CDHIPPLE0/SQL-TODO-LIST#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.5.1"
+  }
+}
