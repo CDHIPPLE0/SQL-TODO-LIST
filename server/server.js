@@ -4,4 +4,6 @@ const app = express();
 const PORT = 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(PORT, () => {});
+app.listen(PORT, () => {
+  log('listening on Port', PORT);
+});
