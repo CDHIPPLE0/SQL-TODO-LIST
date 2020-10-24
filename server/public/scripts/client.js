@@ -21,5 +21,23 @@ function Input() {
   $(this).empty();
   $(this).append(`
       <input id="inputTask" type="text"></input>
-      <button>Add Task</button>`);
+      <button id="sendTask">Add Task</button>`);
+  $('#sendTask').on('click', function () {
+    let task = { task: $('#inputTask').val() };
+    toServer(task);
+  });
+}
+
+function toServer(task) {
+  $.ajax({
+    method: 'POST',
+    url: '/task',
+    data: task,
+  })
+    .then(function () {
+      render();
+    })
+    .catch(function (err) {
+      console.log('error:', err);
+    });
 }

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/CDHIPPLE0/SQL-TODO-LIST#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "pg": "^8.4.1"
   }
 }
