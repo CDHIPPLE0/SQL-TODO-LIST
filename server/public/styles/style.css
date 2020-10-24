@@ -1,13 +1,31 @@
 body {
-  margin: 0;
-  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background: radial-gradient(
+    circle,
+    rgba(29, 29, 57, 1) 48%,
+    rgba(42, 42, 66, 1) 69%,
+    rgba(43, 43, 69, 1) 87%,
+    rgba(46, 46, 62, 1) 96%
+  );
 }
 
 .flexContainer {
+  width: 60vw;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(241, 245, 245, 1) 37%,
+    rgba(214, 214, 217, 1) 78%,
+    rgba(200, 200, 203, 1) 90%,
+    rgba(196, 196, 198, 1) 96%
+  );
 }
 
 .headerContainer {
@@ -16,7 +34,12 @@ body {
   flex-shrink: 0;
   min-height: 5rem;
   border: solid, black, 2px;
-  background-color: bisque;
+  background: linear-gradient(
+    90deg,
+    rgba(227, 200, 154, 1) 13%,
+    rgba(246, 227, 195, 1) 52%,
+    rgba(227, 200, 154, 1) 93%
+  );
 }
 
 .inputContainer {
@@ -47,7 +70,7 @@ body {
 
 .tableContainer th {
   background-color: gray;
-  min-width: 10rem;
+  min-width: 5rem;
   height: 2.5rem;
 }
 
