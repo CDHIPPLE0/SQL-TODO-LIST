@@ -1,3 +1,60 @@
+body {
+  margin: 0;
+  background-color: azure;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.headerContainer {
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+  min-height: 5rem;
+  border: solid, black, 2px;
+  background-color: bisque;
+}
+
+.inputContainer {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  background-color: slategray;
+}
+
+.inputContainer input {
+  max-height: 1.5rem;
+}
+
+.tableContainer {
+  margin-top: 2rem;
+}
+
+.tableContainer tr:nth-child(even) {
+  background-color: blue;
+}
+
+.tableContainer tr:nth-child(odd) {
+  background-color: honeydew;
+}
+
+.tableContainer th {
+  background-color: gray;
+  min-width: 10rem;
+  height: 2.5rem;
+}
+
+.tableContainer td {
+  height: 2rem;
+}
+
 table {
   border-collapse: collapse;
 }

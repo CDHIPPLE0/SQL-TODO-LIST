@@ -3,28 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src=""></script>
-    <script src=""></script>
+    <script src="./vendors/jquery.min.js"></script>
+    <script src="./scripts/client.js"></script>
     <link rel="stylesheet" href="./styles/style.css" />
     <title>To Do List</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
+    <div class="flexContainer">
+      <div class="headerContainer">
         <h1>To-Da-loo</h1>
       </div>
-      <div class="form"></div>
-      <div class="table">
+      <div class="inputContainer">
+        <input type="text" />
+      </div>
+      <div class="tableContainer">
         <table class="table">
           <thead>
-            <th>'hello'</th>
-            <th>'my name'</th>
-            <th>'is clint'</th>
+            <th>Task</th>
+            <th>Time Completed</th>
+            <th></th>
+            <th></th>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            <tr>
+              <td>task</td>
+              <td>time to complete</td>
+              <td><button>update</button></td>
+              <td><button>delete</button></td>
+            </tr>
+            <tr>
+              <td>task</td>
+              <td>time to complete</td>
+              <td><button>update</button></td>
+              <td><button>delete</button></td>
+            </tr>
+          </tbody>
           <tfoot>
             <tr>
-              <td colspan="3">foot</td>
+              <th colspan="4"></th>
             </tr>
           </tfoot>
         </table>
