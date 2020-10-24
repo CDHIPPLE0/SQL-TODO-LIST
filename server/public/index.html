@@ -16,33 +16,52 @@
         </div>
       </div>
       <div class="inputContainer">
-        <input type="text" />
+        <input type="text" placeholder="Tasks To Complete" /><button>
+          New Task
+        </button>
       </div>
       <div class="tableContainer">
         <table class="table">
           <thead>
-            <th>Task</th>
-            <th>Time Completed</th>
-            <th></th>
-            <th></th>
+            <th class="head" id="taskNew">
+              <img id="noteIcon" src="./images/noteIcon.png" />Task
+            </th>
+            <th class="head">Time Completed</th>
+            <th class="head"></th>
+            <th class="head"></th>
           </thead>
           <tbody>
             <tr>
-              <td>task</td>
-              <td>time to complete</td>
+              <td>Take dog to vet... to be down for peeing on rug.</td>
+              <td>14:21</td>
               <td><button>complete</button></td>
               <td><button>delete</button></td>
             </tr>
             <tr>
-              <td>task</td>
-              <td>time to complete</td>
+              <td>Search through listings for new dog to adopt.</td>
+              <td>21:20</td>
+              <td><button>complete</button></td>
+              <td><button>delete</button></td>
+            </tr>
+            <tr>
+              <td>Brag on social media about how I adopt instead of buy.</td>
+              <td>23:32</td>
+              <td><button>complete</button></td>
+              <td><button>delete</button></td>
+            </tr>
+            <tr>
+              <td>
+                Post photo on social media of me and new shelter rescue dog
+                Tinkles.
+              </td>
+              <td>23:43</td>
               <td><button>complete</button></td>
               <td><button>delete</button></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="4"></th>
+              <th colspan="4" class="head"></th>
             </tr>
           </tfoot>
         </table>
