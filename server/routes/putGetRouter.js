@@ -22,9 +22,9 @@ pool.on('error', (error) => {
 
 router.post('/', function (req, res) {
   const data = req.body;
-  const query = `INSERT INTO "tasks" ("task") VALUES ($1);`;
+  const query = `INSERT INTO "tasks" ("task", "complete") VALUES ($1, $2);`;
   pool
-    .query(query, [data.task])
+    .query(query, [data.task, data.complete])
     .then(() => {
       res.sendStatus(201);
     })
