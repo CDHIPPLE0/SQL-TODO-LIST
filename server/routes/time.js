@@ -14,6 +14,7 @@ const pool = new pg.Pool(config);
 
 router.put('/time/:id', (req, res) => {
   const obj = req.body;
+  console.log(req.params.id);
   console.log(obj);
   const queryText = `UPDATE "tasks" SET time=$1 WHERE id=$2;`;
   const queryArray = [obj.time, req.params.id];
