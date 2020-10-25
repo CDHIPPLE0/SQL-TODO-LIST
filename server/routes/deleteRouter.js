@@ -28,4 +28,21 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.put('/complete/:id', (req, res) => {
+  const completeStatus = req.body;
+  console.log(completeStatus);
+  const queryText = `UPDATE "tasks" SET complete=$1 WHERE id=$2;`;
+  const queryArray = [completeStatus.complete, req.params.id];
+
+  pool
+    .query(queryText, queryArray)
+    .then((dbResponse) => {
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.warning(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

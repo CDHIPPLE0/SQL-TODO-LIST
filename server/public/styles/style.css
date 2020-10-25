@@ -13,7 +13,7 @@ body {
 
 .flexContainer {
   width: 60vw;
-  height: 95vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -85,7 +85,8 @@ body {
 .tableContainer {
   margin-top: 2rem;
 }
-/* toggles table head button */
+
+/* toggles table head button background */
 .toggleMouseOver {
   cursor: pointer;
   font-size: 1.2rem;
@@ -118,10 +119,27 @@ body {
   height: 2.5rem;
 }
 
+.taskHead {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: #9a8c98;
+  min-width: 5rem;
+  height: 2.5rem;
+}
+
 .tableContainer td {
   padding: 0.3rem;
   text-align: center;
   height: 2rem;
+}
+
+.iscomplete {
+  background-color: rgba(144, 238, 144, 0.322);
+}
+
+.incomplete {
+  background-color: rgba(255, 0, 0, 0.342);
 }
 
 table {
