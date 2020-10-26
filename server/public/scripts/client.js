@@ -1,6 +1,7 @@
 $(document).ready(clickWait);
 
 function clickWait() {
+  render();
   $('#taskNew').hover(entry, handleMouseOut);
   $('.render').on('click', '.delete', deleteTask);
   $('.render').on('click', '.complete', complete);
@@ -67,6 +68,24 @@ function complete() {
     data: { complete: 'yes' },
   })
     .then((putMessage) => {
+      completeTime(id);
+    })
+    .catch((err) => {
+      console.log(err);
+      alert('Oh SHOOT Did Not UPDATE!!!');
+    });
+}
+
+function completeTime(id) {
+  // let id = $(this).data('id');
+  console.log(id);
+  let time = new Date().toLocaleTimeString();
+  $.ajax({
+    method: 'PUT',
+    url: `/taskTime/time/${id}`,
+    data: { time: time },
+  })
+    .then(() => {
       render();
     })
     .catch((err) => {
@@ -87,15 +106,15 @@ function render() {
         $('.render').append(`<tr>
       <td class="incomplete">${thisTask.task}</td>
       <td class="incomplete">Incomplete</td>
-      <td><button class="complete" data-id=${thisTask.id}>Complete</button></td>
-      <td><button class="delete" data-id=${thisTask.id}>Delete</button></td>
+      <td><button class="complete" data-id="${thisTask.id}">Complete</button></td>
+      <td><button class="delete" data-id="${thisTask.id}">Delete</button></td>
     </tr>`);
       } else {
         $('.render').append(`<tr>
         <td class="iscomplete">${thisTask.task}</td>
         <td>Task Complete</td>
-        <td></td>
-        <td><button class="delete" data-id=${thisTask.id}>Delete</button></td>
+        <td>${thisTask.time}</td>
+        <td><button class="delete" data-id="${thisTask.id}">Delete</button></td>
       </tr>`);
       }
     }
